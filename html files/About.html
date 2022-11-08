@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            background-color: #fbff00;
+        }
+        h1{
+            margin-left: 10cm;
+            margin-top: -13cm;
+            font-size: 170%;
+        }
+        .about{
+            padding: 0;
+            font-size: x-large;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgba(0, 238, 200, 0.3);
+            border-radius: 10px;
+            width: 14cm;
+            margin-left: 11.5cm;
+            margin-top: 1cm;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap');
+
+/* default styles */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+    
+}
+
+/* header */
+
+header{
+    height: 100vh;
+    /* background-image: url('bgimg.png');
+    background-size: cover;
+    background-position: top; */
+}
+
+/* nav */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #2e2e53;
+}
+
+.logo{
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 20px;
+    /* margin-top: 1cm; */
+}
+
+.nav-links{
+    display: flex;
+    justify-content:space-around;
+    width: 50%;
+    margin-top: 0.3cm;
+    margin-right: 3cm;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+
+.nav-links li a{
+    color: #fff;
+    text-decoration:none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    
+}
+
+.burger{
+    cursor: pointer;
+    display: none;
+}
+
+.burger div{
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 5px;
+    transition: transform 0.5s linear;
+}
+
+.icon{
+    font-size: 120%;
+}
+
+@media screen and (max-width: 1024px),( max-height: 1366) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        left: 0;
+        height: 92vh;
+        top: 6vh;
+        background-color: #2e2e53;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        
+    }
+    .nav-links li{
+         opacity: 0; 
+         margin-right: 1cm;
+    }
+    .burger{
+        display: block;
+        margin-left: -3cm;
+    }
+    .logo{
+        color: #fff;
+        letter-spacing: 4px;
+        font-size: 30px;
+        /* margin-top: -0.8cm; */
+        margin-right: 6cm;
+    }
+
+    h1{
+        margin-left: 5cm;
+        margin-top: -23cm;
+        font-size: 170%;
+    }
+
+    .about{
+            padding: 0;
+            font-size: x-large;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgba(0, 238, 200, 0.3);
+            border-radius: 10px;
+            width: 15cm;
+            margin-left: 7cm;
+            margin-top: 1cm;
+    }
+}
+
+@media screen and (max-width: 982px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        left: 0;
+        height: 92vh;
+        top: 6vh;
+        background-color: #2e2e53;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        
+    }
+    .nav-links li{
+         opacity: 0; 
+         margin-right: 1cm;
+    }
+    .burger{
+        display: block;
+        margin-left: -3cm;
+    }
+    .logo{
+        color: #fff;
+        letter-spacing: 4px;
+        font-size: 20px;
+        /* margin-top: -0.7cm; */
+        margin-right: 3cm;
+    }
+
+    h1{
+        margin-left: 2cm;
+        margin-top: -19cm;
+        font-size: 170%;
+    }
+
+    .about{
+            padding: 0;
+            font-size: x-large;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgba(0, 238, 200, 0.3);
+            border-radius: 10px;
+            width: 15cm;
+            margin-left: 4cm;
+            margin-top: 1cm;
+    }
+}
+
+/* Ipads and tablets queries */
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        left: 0;
+        height: 92vh;
+        top: 6vh;
+        background-color: #2e2e53;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        
+    }
+    .nav-links li{
+         opacity: 0; 
+         margin-right: 1cm;
+    }
+    .burger{
+        display: block;
+        margin-left: -3cm;
+    }
+    .logo{
+        color: #fff;
+        letter-spacing: 4px;
+        font-size: 20px;
+        /* margin-top: -0.7cm; */
+        margin-right: 3cm;
+    }
+
+    h1{
+        margin-left: 1cm;
+        margin-top: -16cm;
+        font-size: 170%;
+    }
+
+    .about{
+            padding: 0;
+            font-size: x-large;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgba(0, 238, 200, 0.3);
+            border-radius: 10px;
+            width: 12cm;
+            margin-left: 4cm;
+            margin-top: 1cm;
+        }
+
+}
+
+
+/* Mobile phone queries */
+
+@media screen and (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        left: 0;
+        height: 92vh;
+        top: 6vh;
+        background-color: #2e2e53;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        
+    }
+    .nav-links li{
+         opacity: 0; 
+         margin-right: 1cm;
+    }
+    .burger{
+        display: block;
+        margin-left: -1cm;
+    }
+
+    .logo{
+        color: #fff;
+        letter-spacing: 4px;
+        font-size: 20px;
+        /* margin-top: -0.7cm; */
+        margin-right:0cm;
+    }
+
+    h1{
+        margin-left: 0.7cm;
+        margin-top: -14cm;
+        font-size: 160%;
+    }
+
+    .about{
+            padding: 0;
+            font-size: x-large;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgba(0, 238, 200, 0.3);
+            border-radius: 10px;
+            width: 8cm;
+            margin-left: 0.8cm;
+            margin-top: 1cm;
+        }
+}
+
+/* Javascript styles */
+
+.nav-active{
+    transform: translateX(0);
+}
+
+@keyframes navLinkMove{
+    from{
+        opacity: 0;
+         transform: translateX(-70px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.toggle .line-1{
+    transform: rotate(315deg) translate(-5px, 6px);
+}
+.toggle .line-2{
+    opacity: 0;
+}
+.toggle .line-3{
+    transform: rotate(-315deg) translate(-5px, -6px);
+}
+
+    </style>
+    <title>st:store</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="burger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+    
+    
+            <ul class="nav-links">
+                <li>
+                    <a href="../html files/index.php">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html files/shop.php">
+                        <span class="icon"><ion-icon name="basket-outline"></ion-icon></span>
+                        <span class="text">Shop</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html files/addpost.php">
+                        <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
+                        <span class="text">Add post</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html files/About.html">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="text">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html files/contact.html">
+                        <span class="icon"><ion-icon name="paper-plane-outline"></ion-icon></span>
+                        <span class="text">Contact Us</span>
+                    </a>
+                </li>
+            </ul>
+    
+            <div class="logo">
+
+                <h4>Account Shop</h4>
+            </div>
+        </nav>
+    </header>
+
+    <h1>WELCOME TO WEBSITE FOR SELLING ACCOUNTS</h1>
+    <p class="about">In this website you can sell your account or buy a new account. And on this website you can not stole accounts because i using the best websecurity plugins.</p>
+
+
+    <script src="../jsfiles/NavBurger.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
