@@ -1,0 +1,133 @@
+:root{
+    --blue: #3498db;
+    --dark-blue: #2980b9;
+    --red: #e74c3c;
+    --dark-red: #c0392b;
+    --black: #333;
+    --white: #fff;
+    --light-bg: #eee;
+    --box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar{
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+}
+
+div.container{
+    background-color: var(--light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+    margin-top: 3cm;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+
+}
+
+.container .profile img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.container .profile p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .profile button{
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.container .profile button.btn{
+    background-color: #3498db;
+    color: #fff;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+}
+
+.container .profile button.delete-btn{
+    background-color: var(--red);
+    color: #fff;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    margin-top: 10px;
+}
+
+.container .profile button.btn:hover{
+    background-color: var(--dark-blue);
+}
+
+.container .profile button.delete-btn:hover{
+    background-color: var(--dark-red);
+}
+
+
+
+
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    body {
+      overflow-x: hidden;
+    }
+
+    div.container{
+        background-color: var(--light-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: 700px;
+        padding: 20px;
+        margin-top: 4cm;
+        border-radius: 5px;
+        box-shadow: black;
+    }
+
+}
+
+@media scrreen and (max-width: 767px){
+    div.container{
+        background-color: var(--light-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 350px;
+        padding: 20px;
+        margin-right: 6cm;
+        margin-top: 3cm;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+    }
+}
